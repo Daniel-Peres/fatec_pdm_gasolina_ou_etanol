@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -66,11 +67,8 @@
         android:id="@+id/resultadoTextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:outlineProvider="none"
-        android:padding="@dimen/textView_padding"
-        android:textColorHint="@color/colorPrimaryDark"
-        app:errorEnabled="false">
+        app:errorEnabled="true"
+        app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/resultadoTextView"
@@ -78,10 +76,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:fontFamily="@font/coming_soon"
+            android:gravity="fill_horizontal"
             android:hint="@string/melhor_opcao"
-            android:textColor="@color/colorPrimaryDark"
-            android:visibility="visible" />
+            android:textSize="18sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
