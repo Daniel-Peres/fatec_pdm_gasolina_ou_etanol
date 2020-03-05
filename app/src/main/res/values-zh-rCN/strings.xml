@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">汽油还是乙醇？</string>
+    <string name="preco_etanol">一升乙醇的价格</string>
+    <string name="preco_gasolina">汽油价格</string>
+    <string name="gasolina">汽油</string>
+    <string name="etanol">乙醇</string>
+    <string name="melhor_opcao">最好用…</string>
+    <string name="preco">0,00</string>
+</resources>
