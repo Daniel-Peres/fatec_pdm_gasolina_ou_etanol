@@ -1,11 +1,11 @@
 package br.com.fatec_pdm_gasolina_ou_etanol;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -41,13 +41,14 @@ public class MainActivity extends AppCompatActivity {
         gasolinaTextView.setText(R.string.preco);
         etanolTextView = findViewById(R.id.etanolTextView);
         etanolTextView.setText(R.string.preco);
-        resultadoTextView = findViewById(R.id.resultadoTextView);
-        resultadoTextView.setText(R.string.app_name);
 
         etanolSeekBar = findViewById(R.id.etanolSeekBar);
         gasolinaSeekBar = findViewById(R.id.gasolinaSeekBar);
 
         resultadoTextInputLayout = findViewById(R.id.resultadoTextInputLayout);
+        resultadoTextView = findViewById(R.id.resultadoTextView);
+        resultadoTextView.setText(R.string.app_name);
+
         combustivelImageView = findViewById(R.id.combustivelImageView);
         combustivelImageView.setImageDrawable(getDrawable(R.drawable.etanol_gasolina));
 
@@ -93,10 +94,14 @@ public class MainActivity extends AppCompatActivity {
     private void checarCombustivel(){
         if (etanolPrice / gasolinaPrice >= percent){
             resultadoTextView.setText(R.string.gasolina);
+            resultadoTextView.setTextColor(getColor(R.color.resultadoGasolina));
             combustivelImageView.setImageDrawable(getDrawable(R.drawable.gasolina));
+
         }else{
             resultadoTextView.setText(R.string.etanol);
+            resultadoTextView.setTextColor(getColor(R.color.resultadoEtanol));
             combustivelImageView.setImageDrawable(getDrawable(R.drawable.etanol));
+
         }
     }
 
