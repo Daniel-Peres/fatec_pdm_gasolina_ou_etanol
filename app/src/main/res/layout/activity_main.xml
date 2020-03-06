@@ -68,17 +68,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
-        app:boxBackgroundMode="outline">
+        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/resultadoTextView"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:gravity="fill_horizontal"
             android:hint="@string/melhor_opcao"
-            android:textSize="18sp" />
+            android:textSize="@dimen/textSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
