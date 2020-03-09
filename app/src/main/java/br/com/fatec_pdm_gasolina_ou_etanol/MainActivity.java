@@ -92,15 +92,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checarCombustivel(){
-        if (etanolPrice / gasolinaPrice >= percent){
+        if (etanolPrice / gasolinaPrice >= percent || etanolPrice == gasolinaPrice){
             resultadoTextView.setText(R.string.gasolina);
             resultadoTextView.setTextColor(getColor(R.color.resultadoGasolina));
             combustivelImageView.setImageDrawable(getDrawable(R.drawable.gasolina));
+            resultadoTextInputLayout.setBoxStrokeColor(getColor(R.color.resultadoGasolina));
 
         }else{
             resultadoTextView.setText(R.string.etanol);
             resultadoTextView.setTextColor(getColor(R.color.resultadoEtanol));
             combustivelImageView.setImageDrawable(getDrawable(R.drawable.etanol));
+            resultadoTextInputLayout.setBoxStrokeColor(getColor(R.color.resultadoEtanol));
 
         }
     }
